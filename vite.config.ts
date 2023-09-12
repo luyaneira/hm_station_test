@@ -9,6 +9,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: "./index.html",
+                web_station_sign: "./src/customStationSign/web_station_sign.html",
+                result_importance: "./src/result_importance.html",
+                result_location: "./src/result_location.html",
                 ...getMapsScripts(maps),
             },
         },
