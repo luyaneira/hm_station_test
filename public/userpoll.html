@@ -44,7 +44,8 @@
                     let otherId = "other";
                     let noneId = "none";
 
-                    WA.onInit().tehn(async () => {
+                    WA.onInit().then(async () => {
+                    
                         if(document.getElementById(schoolId).checked) {
                             let currVal = WA.state.loadVariable(schoolId);
                             WA.state.saveVariable(schoolId, currVal+1);
@@ -76,9 +77,11 @@
                         } else {
 
                         }
-                        const cowebsites = await WA.nav.getCowebSites();
-                        console.log("cowebsites: " + cowebsites)
-                        //WA.nav.goToPage("https://buenni86.github.io/hm-station/userpoll_fin.html");
+                        
+                        const coWebsites = await WA.nav.getCoWebSites();
+                        console.log("cowebsite: ", coWebsites[1]);
+
+                        coWebsites[1].close();
 
                     }).catch((e) => console.error(e));                    
                 }

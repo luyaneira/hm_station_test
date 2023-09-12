@@ -6168,7 +6168,7 @@
                          "value":"admin"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2341.5,
@@ -6196,7 +6196,7 @@
                          "value":"admin"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2342,
@@ -6224,7 +6224,7 @@
                          "value":"admin"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2342,
@@ -6252,7 +6252,7 @@
                          "value":"admin"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2343.5,
@@ -6280,7 +6280,7 @@
                          "value":"admin"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2388.5,
@@ -6308,7 +6308,7 @@
                          "value":"admin"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2388,
@@ -6331,7 +6331,7 @@
                          "value":true
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":2390.5,
@@ -7667,7 +7667,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"{{\/enableUserPoll}}https:\/\/buenni86.github.io\/hm-station\/userpoll.html{{\/enableUserPoll}}"
+                         "value":".\/userpoll.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -7675,7 +7675,7 @@
                          "value":true
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":1100.67,
                  "x":1354.665,
@@ -7935,44 +7935,6 @@
                  "width":0,
                  "x":3100,
                  "y":585.333333333333
-                }, 
-                {
-                 "height":0,
-                 "id":137,
-                 "name":"enableUserPoll",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"label",
-                         "type":"string",
-                         "value":"Umfrage aktivieren"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"readableBy",
-                         "type":"string",
-                         "value":"editor"
-                        }, 
-                        {
-                         "name":"writeableBy",
-                         "type":"string",
-                         "value":"editor"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":1557,
-                 "y":2505
                 }],
          "opacity":1,
          "properties":[
