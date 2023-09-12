@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "DB Head";
+    src: url('fonts/dbhea02.ttf');
+    src: url('fonts/dbhea02.ttf') format('truetype');
+  }
+
+/*
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+*/
+
+body {
+    background-color: #008984;
+    padding: 5%;
+    text-align: center;
+    display: inline;
+}
+
+.content-width {
+    max-width: 80%;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+}
+
+.netiquette {
+    text-align: left;
+    color: whitesmoke;
+}
+
+ol {
+    font-size: small;
+    text-align: left;
+}
+
+header {
+    background-color: #008984;
+    color: #061350;
+}
+
+h2, h3, p, form {
+    color: whitesmoke;
+}
+
+.iframe-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe {
+    display: block;
+    border: none;
+    border-radius: 2%;
+}
+
+label {
+    background-color: #9fd45f;
+    margin: 2px;
+    padding: 2%;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80%;
+}
+
+label:hover {
+    background-color: #061350;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label {
+    font-weight: bold;
+    background-color: #061350;
+}
+
+input[type="button"]{
+    background-color: #9fd45f;
+    color: whitesmoke;
+    font-size: medium;
+    border-style: none;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2%;
+}
+
+input[type="button"]:hover {
+    font-weight: bold;
+}

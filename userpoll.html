@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Kurzumfrage</title>
+        <script src="https://play.workadventu.re/iframe_api.js"></script>
+        <script src="https://unpkg.com/@workadventure/scripting-api-extra"></script>
+    </head>
+    <body>
+        <div class="content-width">
+            <h3>
+                Bitte beantworte uns kurz eine Frage:
+            </h3>
+            <h2>
+                Welche der folgenden Bezeichnungen trifft auf dich zu?
+            </h2>
+
+            <form id="userPoll">
+                <input type="radio" id="school" name="status" value="school">
+                <label for="school">Schüler:in</label><br>
+                <input type="radio" id="student" name="status" value="student">
+                <label for="student">Student:in</label><br>
+                <input type="radio" id="parent" name="status" value="parent">
+                <label for="parent">Elternteil / Erziehungsberechtige:r</label><br>
+                <input type="radio" id="teacher" name="status" value="teacher">
+                <label for="teacher">Lehrkraft</label><br>
+                <input type="radio" id="jobconsultant" name="status" value="jobconsultant">
+                <label for="jobconsultant">Berufsberater:in</label><br>
+                <input type="radio" id="other" name="status" value="other">
+                <label for="other">Anderes</label><br>
+                <input type="radio" id="none" name="status" value="none">
+                <label for="none">keine Angabe</label><br><br><br>
+                <input type="button" value="Absenden" onclick="savePollResult()">
+            </form>
+
+            <script>
+                async function savePollResult() {
+                    let schoolId = "school";
+                    let studentId = "student";
+                    let parentId = "parent";
+                    let teacherId = "teacher";
+                    let jobConsId = "jobconsultant";
+                    let otherId = "other";
+                    let noneId = "none";
+
+                    WA.onInit().tehn(async () => {
+                        if(document.getElementById(schoolId).checked) {
+                            let currVal = WA.state.loadVariable(schoolId);
+                            WA.state.saveVariable(schoolId, currVal+1);
+
+                        } else if(document.getElementById(studentId).checked) {
+                            let currVal = WA.state.loadVariable(studentId);
+                            WA.state.saveVariable(studentId, currVal+1);
+                            
+                        } else if(document.getElementById(parentId).checked) {
+                            let currVal = WA.state.loadVariable(parentId);
+                            WA.state.saveVariable(parentId, currVal+1);
+
+                        } else if(document.getElementById(teacherId).checked) {
+                            let currVal = WA.state.loadVariable(teacherId);
+                            WA.state.saveVariable(teacherId, currVal+1);
+
+                        } else if(document.getElementById(jobConsId).checked) {
+                            let currVal = WA.state.loadVariable(jobConsId);
+                            WA.state.saveVariable(jobConsId, currVal+1);
+
+                        } else if(document.getElementById(otherId).checked) {
+                            let currVal = WA.state.loadVariable(otherId);
+                            WA.state.saveVariable(otherId, currVal+1);
+
+                        } else if(document.getElementById(noneId).checked) {
+                            let currVal = WA.state.loadVariable(noneId);
+                            WA.state.saveVariable(noneId, currVal+1);
+                            console.log("currVal: " + currVal);
+                        } else {
+
+                        }
+                        const cowebsites = await WA.nav.getCowebSites();
+                        console.log("cowebsites: " + cowebsites)
+                        //WA.nav.goToPage("https://buenni86.github.io/hm-station/userpoll_fin.html");
+
+                    }).catch((e) => console.error(e));                    
+                }
+            </script>
+        </div>
+    </body>
+</html>
