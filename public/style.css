@@ -4,17 +4,24 @@
     src: url('fonts/dbhea02.ttf') format('truetype');
   }
 
-/*
-html {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-*/
-
 body {
     background-color: #008984;
     padding: 5%;
     text-align: center;
     display: inline;
+}
+
+a {
+    color: #061350;
+}
+
+table {
+    Color: whitesmoke;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
 }
 
 .content-width {
@@ -63,7 +70,7 @@ label {
     width: 80%;
 }
 
-label:hover {
+label:hover:not([disabled]) {
     background-color: #061350;
 }
 
@@ -86,6 +93,11 @@ input[type="button"]{
     padding: 2%;
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover:not([disabled]) {
     font-weight: bold;
+}
+
+input[type="button"]:disabled,
+button[disabled] {
+    background-color: lightslategray;
 }

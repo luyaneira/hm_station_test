@@ -7452,7 +7452,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/buenni86.github.io\/hm-station\/tutorial.html"
+                         "value":".\/tutorial.html"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -7664,11 +7664,6 @@
                  "id":122,
                  "name":"userpoll",
                  "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":".\/userpoll.html"
-                        }, 
                         {
                          "name":"openWebsiteAllowApi",
                          "type":"bool",

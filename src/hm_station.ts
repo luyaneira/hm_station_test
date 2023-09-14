@@ -53,11 +53,11 @@ var msgJobLocationResult = "Bei uns kannst du jedem der Bereiche einstiegen. Sch
 var labelShowJobs = "Zeig mir die Jobs!";
 var urlJobs2 = "https://db.jobs/service/search/de-de/7707604?qli=true&query=&itemsPerPage=10&pageNum=0&country=Deutschland&positiontype=Ausbildung&positiontype=Duales+Studium"
 
-var url1stRoom = "../db/hm-bahnhof#specialZones/voting/entry1stRoom";
-var url2ndRoom = "../db/hm-bahnhof#specialZones/voting/entry2ndRoom";
-var url3rdRoom = "../db/hm-bahnhof#specialZones/voting/entry3rdRoom";
-var url4thRoom = "../db/hm-bahnhof#specialZones/voting/entry4thRoom";
-var urlVotingExit = "../db/hm-bahnhof#specialZones/voting/votingExit";
+var url1stRoom = "../dbevents/hm-bahnhof#specialZones/voting/entry1stRoom";
+var url2ndRoom = "../dbevents/hm-bahnhof#specialZones/voting/entry2ndRoom";
+var url3rdRoom = "../dbevents/hm-bahnhof#specialZones/voting/entry3rdRoom";
+var url4thRoom = "../dbevents/hm-bahnhof#specialZones/voting/entry4thRoom";
+var urlVotingExit = "../dbevents/hm-bahnhof#specialZones/voting/votingExit";
 
 var layerVoteAcq = "specialZones/voting/acquisitionVoting";
 var layerVoteMoney = "specialZones/voting/moneyVoting";
@@ -70,8 +70,6 @@ var layerExit2ndRoom = "specialZones/voting/exit2ndRoom";
 var layerOpenExit = "specialZones/voting/openExit_auto";
 
 var layerReset = "specialZones/voteReset";
-
-//var urlPolling = "../src/worldmap.html";
 
 var layerTime = "popUpTime";
 var popUpTime = "time";
@@ -106,6 +104,7 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
+    processUserPoll();
     processPopUpArea();
 
     WA.room.onLeaveLayer(layerTime).subscribe(() => {
@@ -710,6 +709,18 @@ const contactPopUpArea = new Map ([
     ["contact4", "popUpContact4"],
     ["contact5", "popUpContact5"],
 ])
+
+
+var urlPolling = "./userpoll.html";
+var hasPlayerPolled;
+
+async function processUserPoll() {
+    hasPlayerPolled = await WA.player.state.hasPolled;
+
+    if (!WA.player.state.hasPolled) {
+        WA.nav.openCoWebSite(urlPolling, true);
+    }
+}
 
 var msgContact = "Persönliche Beratung gewünscht? Hinterlasse hier deine Kontaktdaten!";
 var labelContact = "Kontaktformular öffnen";

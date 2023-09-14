@@ -2430,6 +2430,12 @@
                  "height":320,
                  "id":40,
                  "name":"0",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/maze_info.html"
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
