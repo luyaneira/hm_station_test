@@ -711,7 +711,7 @@ const contactPopUpArea = new Map ([
 ])
 
 
-var urlPolling = "../public/userpoll.html";
+var urlPolling = "../userpoll.html";
 var hasPlayerPolled;
 
 async function processUserPoll() {
