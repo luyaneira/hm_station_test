@@ -31,10 +31,14 @@
                 <label for="other">Anderes</label><br>
                 <input type="radio" id="none" name="status" value="none">
                 <label for="none">keine Angabe</label><br><br><br>
-                <input type="button" value="Absenden" onclick="savePollResult()">
+                <input type="button" disabled="disabled" value="Absenden" onclick="savePollResult(), this.disabled=true;">
             </form>
 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
             <script>
+                $("input:radio").change(function () {$("input:button").prop("disabled", false);});
+                $("input:button").click(function () {$("input:radio").prop("disabled", true)});
+
                 async function savePollResult() {
                     let schoolId = "school";
                     let studentId = "student";
@@ -45,6 +49,8 @@
                     let noneId = "none";
 
                     WA.onInit().then(async () => {
+
+                        WA.player.state.hasPolled = true;
                     
                         if(document.getElementById(schoolId).checked) {
                             let currVal = WA.state.loadVariable(schoolId);
@@ -79,8 +85,6 @@
                         }
                         
                         const coWebsites = await WA.nav.getCoWebSites();
-                        console.log("cowebsite: ", coWebsites[1]);
-
                         coWebsites[1].close();
 
                     }).catch((e) => console.error(e));                    
