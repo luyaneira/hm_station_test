@@ -717,7 +717,7 @@ var hasPlayerPolled;
 async function processUserPoll() {
     hasPlayerPolled = await WA.player.state.hasPolled;
 
-    if (!WA.player.state.hasPolled) {
+    if (!hasPlayerPolled) {
         WA.nav.openCoWebSite(urlPolling, true);
     }
 }
