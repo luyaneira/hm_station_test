@@ -6391,6 +6391,33 @@
                  "width":272.973,
                  "x":3550.5135,
                  "y":1429.5
+                }, 
+                {
+                 "height":152.666333333334,
+                 "id":144,
+                 "name":"userpollResult",
+                 "properties":[
+                        {
+                         "name":"allowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"readableBy",
+                         "type":"string",
+                         "value":"hm-station-admin"
+                        }, 
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":".\/src\/result_userpoll.html"
+                        }],
+                 "rotation":0,
+                 "type":"website",
+                 "visible":true,
+                 "width":277.667,
+                 "x":2178.49983333333,
+                 "y":2203.3335
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -10250,7 +10277,7 @@
          "y":0
         }],
  "nextlayerid":129,
- "nextobjectid":144,
+ "nextobjectid":145,
  "orientation":"orthogonal",
  "properties":[
         {
